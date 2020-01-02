@@ -1,29 +1,12 @@
-name: CI
-
+name: Build project and Run Lighthouse CI
 on:
   push:
-    branches: 
-      - master
-
+      branches: 
+        - master
 jobs:
-  lighthouse:
+  lhci:
+    name: Lighthouse CI
     runs-on: macos-latest
-    # steps:
-    #   - uses: actions/checkout@v1
-    #   - name: Audit URLs using Lighthouse
-    #     uses: treosh/lighthouse-ci-action@v2
-    #     with:
-    #       urls: |
-    #         https://treo.sh/
-    #         https://treo.sh/demo
-    #       temporaryPublicStorage: true
-    #       configPath: ./lighthouserc.yml
-    #   - name: Save results
-    #     uses: actions/upload-artifact@v1
-    #     with:
-    #       name: lighthouse-results
-    #       path: '.lighthouseci' # This will save the Lighthouse results as .json files
-
     steps:
       - uses: actions/checkout@v1
       - name: Use Node.js 10.x

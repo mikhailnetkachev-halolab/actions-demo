@@ -1,28 +1,13 @@
-# ci:
-#   collect:
-#     numberOfRuns: 1
-#   assert:
-#     lighthouse: all
-#     assertions:
-#       offscreen-images: 'off'
-#       uses-webp-images: 'off'
-#       color-contrast: 'off'
-#   upload:
-#     target: "temporary-public-storage"
-
 ci:
   collect:
     numberOfRuns: 1
-    url:
-      - https://meetalleyoop.com/
-      - https://meetalleyoop.com/collections/all
-      - https://meetalleyoop.com/collections/body-care/products/slow-your-roll-deodorant
+    # url:
+    #   - https://meetalleyoop.com/
   upload:
     target: "temporary-public-storage"
     githubToken: ${LHCI_GITHUB_APP_TOKEN}
   assert:
-    lighthouse: all
+    preset: "lighthouse:all"
     assertions:
       offscreen-images: 'off'
       uses-webp-images: 'off'
-      color-contrast: 'off'
