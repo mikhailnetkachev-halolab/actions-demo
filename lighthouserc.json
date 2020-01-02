@@ -7,7 +7,6 @@
       ]
     },
     "assert": {
-      "preset": "lighthouse:all",
       "assertions": {
         "offscreen-images": "off",
         "uses-webp-images": "off"
