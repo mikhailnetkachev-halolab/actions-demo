@@ -1,0 +1,21 @@
+{
+  "ci": {
+    "collect": {
+      "numberOfRuns": 1,
+      "url": [
+        "https://meetalleyoop.com/"
+      ]
+    },
+    "assert": {
+      "preset": "lighthouse:all",
+      "assertions": {
+        "offscreen-images": "off",
+        "uses-webp-images": "off"
+      }
+    },
+    "upload": {
+      "target": "temporary-public-storage",
+      "githubToken": "40825d4bb53b88691fbb8d441536c393ebdceb90"
+    }
+  }
+}
