@@ -1,0 +1,22 @@
+name: CI
+
+on:
+  push:
+    branches: 
+      - master
+
+jobs:
+  build:
+    runs-on: macos-latest
+
+    steps:
+    - name: Run a multi-line script
+      run: |
+        echo Builded,
+        echo Deployed.
+        
+  audit:
+    runs-on: macos-latest
+    steps:
+      - name: Google Lighthouse Audit
+        run: echo Audited with Lighthouse!
