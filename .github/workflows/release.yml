@@ -1,4 +1,4 @@
-name: Lighthouse
+name: Release
 on:
   release:
     types: [created, edited]
@@ -12,8 +12,10 @@ jobs:
         uses: treosh/lighthouse-ci-action@v2
         with:
           configPath: ./lighthouserc.json
-      - name: Save results
+          githubToken: ${LHCI_GITHUB_TOKEN}
+      - name: Save results as Artifact
         uses: actions/upload-artifact@v1
         with:
           name: lighthouse-results
-          path: '.lighthouseci' # This will save the Lighthouse results as .json files.
+          path: '.lighthouseci'
+
