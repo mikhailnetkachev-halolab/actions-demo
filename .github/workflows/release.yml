@@ -1,8 +1,8 @@
 name: Lighthouse
 on:
-  push:
-      branches: 
-        - master
+  release:
+    types: [created, edited]
+
 jobs:
   lighthouse:
     runs-on: ubuntu-latest
