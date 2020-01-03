@@ -3,7 +3,9 @@
     "collect": {
       "numberOfRuns": 1,
       "url": [
-        "https://meetalleyoop.com/"
+        "https://meetalleyoop.com/",
+        "https://meetalleyoop.com/collections/all",
+        "https://meetalleyoop.com/collections/body-care/products/slow-your-roll-deodorant"
       ]
     },
     "assert": {
