@@ -13,10 +13,6 @@
         "offscreen-images": "off",
         "uses-webp-images": "off"
       }
-    },
-    "upload": {
-      "target": "temporary-public-storage",
-      "githubToken": "40825d4bb53b88691fbb8d441536c393ebdceb90"
     }
   }
 }
